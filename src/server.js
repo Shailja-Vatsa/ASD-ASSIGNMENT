@@ -1,12 +1,7 @@
-const express = require("express");
+const app = require("./index");
 
-const app = express();
-app.use(express.json());
+if (require.main === module) {
+  app.listen(3000, () => console.log("Server started on port 3000"));
+}
 
-app.get("/health", (req, res) => {
-  res.status(200).json({ status: "OK" });
-});
-
-app.listen(3000, () => {
-  console.log("Server started on port 3000");
-});
+module.exports = app;

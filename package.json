@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/server.js"
+    "test": "node --test",
+    "start": "node src/index.js",
+    "seed": "prisma db seed"
   },
   "keywords": [],
   "author": "",
